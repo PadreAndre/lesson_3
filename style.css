@@ -1,0 +1,101 @@
+@import 'reset.css';
+
+body {
+    font-size: 36px; /* все объекты, находящееся внутри тега боди, унаследует все его свойства*/
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 30px;
+    color: coral;
+    background-color: rgb(234, 234, 234); 
+}
+
+/* Вложенность и приоритетность */
+
+p span {
+    color: darkmagenta;
+    background-color: darkorange;
+}
+
+/*селектор по тегу имеет мнеьшую приоритетность на ряду с тегом класса */
+
+h1 {
+    font-size: 46px;
+    color: rgb(0, 252, 134);
+}
+
+h1 {
+    font-size: 46px;
+    color: rgb(0, 252, 134);   /* при равнозначных селекторах приоритетным является нижний */
+}
+
+.header__title {
+    color: brown;   /* селектор класса приоритетнее селектора тега */
+}
+
+author {
+    font-size: 50px;
+    color: rgb(97, 0, 19);  /* бог слери селекторов, т.к является уникальным (единственным) */
+    background-color: darkcyan;
+}
+
+/* уточнение */
+
+div .main__text-1 {
+    font-size: 28px;
+    color: #fff;
+    background-color: rgb(175, 59, 242);    /* Этот приоритетней */
+}
+
+.main__text-1 {
+    font-size: 38px;
+    color: indigo;
+    background-color: ivory;
+}
+
+/* Приоритеность №1 .класс .класс*/
+
+.main__wrapper .main__text-1 {
+    background-color: darkslategrey;    
+    font-size: 21px;
+    color: fuchsia;
+}
+
+/* Приоритеность №2 .класс тег */
+
+.main__text-2 span{
+    color: gold;
+}
+
+/* Приоритеность №3 тег тег*/
+
+section h3 {
+    color: lightcyan;
+    background-color: rgb(51, 43, 43); /* Все объекты ОДНОВРЕМЕННО */
+}
+
+/* Обращаемся только к первому 
+	следующему объекту того же уровня */
+
+.footer__text + p {
+    background-color: lightseagreen;
+    color: lightyellow;
+}
+
+/* Обращаемся ко всем следующим объектам того же уровня */
+
+.footer__text ~ p {
+    background-color: rgb(48, 48, 48);
+    color: magenta;
+}
+
+/* Общий селектор */
+
+* {
+    font-size: 30px;
+}

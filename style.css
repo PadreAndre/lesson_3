@@ -79,15 +79,6 @@ section h3 {
     background-color: rgb(51, 43, 43); /* Все объекты ОДНОВРЕМЕННО */
 }
 
-/* Обращаемся только к первому 
-	следующему объекту того же уровня */
-
-.footer__text + p {
-    background-color: lightseagreen;
-    color: lightyellow;
-}
-
-
 /* Используем селектор атрибута */
 [class*="-text"] {
 	/* color: red; */
@@ -95,10 +86,18 @@ section h3 {
 
 /* Обращаемся ко всем следующим объектам того же уровня */
 
-.footer__text ~ p {
+.upper-text + p {
+    background-color: lightseagreen;
+    color: lightyellow;
+}
+
+/* Обращаемся ко всем следующим объектам того же уровня */
+
+.bottom-text ~ p {
     background-color: rgb(48, 48, 48);
     color: magenta;
 }
+
 
 /* Общий селектор часто используется для таких значение как box sizing border box*/
 

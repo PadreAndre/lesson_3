@@ -38,7 +38,7 @@ h1 {
     color: brown;   /* селектор класса приоритетнее селектора тега */
 }
 
-author {
+#author {
     font-size: 50px;
     color: rgb(97, 0, 19);  /* бог слери селекторов, т.к является уникальным (единственным) */
     background-color: darkcyan;
@@ -87,6 +87,12 @@ section h3 {
     color: lightyellow;
 }
 
+
+/* Используем селектор атрибута */
+[class*="-text"] {
+	/* color: red; */
+}
+
 /* Обращаемся ко всем следующим объектам того же уровня */
 
 .footer__text ~ p {
@@ -94,7 +100,7 @@ section h3 {
     color: magenta;
 }
 
-/* Общий селектор */
+/* Общий селектор часто используется для таких значение как box sizing border box*/
 
 * {
     font-size: 30px;

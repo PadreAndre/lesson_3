@@ -20,6 +20,7 @@ p {
 p span {
     color: darkmagenta;
     background-color: darkorange;
+	font-size: 33px;
 }
 
 /*селектор по тегу имеет мнеьшую приоритетность на ряду с тегом класса */
@@ -85,6 +86,7 @@ section h3 {
 .upper-text + p {
     background-color: lightseagreen;
     color: lightyellow;
+	font-size: 33px;
 }
 
 /* Обращаемся ко всем следующим объектам того же уровня */
